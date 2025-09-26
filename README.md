@@ -244,12 +244,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Kotlin Team** for the amazing programming language
 - **Community contributors** who help improve this project
 
-## 📞 Support
-
-- 💬 **Discord**: [Join our server](https://discord.gg/your-server)
-- 📧 **Email**: support@yourproject.com
-- 📖 **Wiki**: [Documentation](../../wiki)
-- 🐛 **Issues**: [Bug Tracker](../../issues)
 
 ---
 
