@@ -1,0 +1,50 @@
+name: Open Parties and Claims bridge
+version: '${version}'
+main: de.thelion.openPartiesAndClaimsBridge.OpenPartiesAndClaimsBridge
+api-version: '1.21'
+authors: [ thelion ]
+description: API Bridge for Open Parties and Claims Fabric Mod
+website: https://github.com/thelion154/OpenPartiesAndClaimsBridge
+
+permissions:
+  openpartiesandclaims.*:
+    description: All Open Parties and Claims permissions
+    default: false
+    children:
+      openpartiesandclaims.claim: true
+      openpartiesandclaims.party: true
+      openpartiesandclaims.admin: true
+  
+  openpartiesandclaims.claim:
+    description: Allows creating and managing claims
+    default: true
+  
+  openpartiesandclaims.party:
+    description: Allows creating and managing parties
+    default: true
+  
+  openpartiesandclaims.admin:
+    description: Administrative permissions for claims and parties
+    default: op
+  
+  openpartiesandclaims.unlimited:
+    description: Bypass claim limits
+    default: false
+  
+  openpartiesandclaims.public:
+    description: Allows making claims public
+    default: true
+  
+  openpartiesandclaims.grant.admin:
+    description: Allows granting admin permissions to other players
+    default: op
+  
+  openpartiesandclaims.spawn.bypass:
+    description: Allows claiming near spawn areas
+    default: op
+
+commands:
+  opcbridge:
+    description: Open Parties and Claims Bridge commands
+    usage: /opcbridge <reload|status|sync>
+    permission: openpartiesandclaims.admin

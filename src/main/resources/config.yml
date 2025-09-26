@@ -1,0 +1,56 @@
+# Open Parties and Claims Bridge Configuration
+# This plugin acts as an API bridge between the Fabric mod and Paper server
+
+# Database Configuration
+database:
+  type: "sqlite"
+  file: "claims.db"
+
+# Synchronization Settings
+sync:
+  interval-seconds: 30
+  batch-size: 50
+  max-retries: 3
+
+# Claim Settings
+claims:
+  min-size: 16
+  max-size: 1024
+  max-per-player: 10
+  min-distance: 8
+
+# World Settings
+world-border-size: 10000
+spawn-protection-radius: 100
+
+# Disabled worlds (claims cannot be created in these worlds)
+disabled-worlds:
+  - "world_nether"
+  - "world_the_end"
+
+# World-specific spawn coordinates (for spawn protection)
+worlds:
+  world:
+    spawn:
+      x: 0
+      z: 0
+  world_nether:
+    spawn:
+      x: 0
+      z: 0
+  world_the_end:
+    spawn:
+      x: 0
+      z: 0
+
+# Debug Settings
+debug:
+  enabled: false
+  log-packets: false
+  log-sync: false
+
+# Performance Settings
+performance:
+  async-database-operations: true
+  cache-claims: true
+  cache-timeout-minutes: 30
